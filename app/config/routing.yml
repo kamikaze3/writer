@@ -1,3 +1,8 @@
+kamikaze3_writer_core:
+    resource: "@Kamikaze3WriterCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 kamikaze3_writer_frontend:
     resource: "@Kamikaze3WriterFrontendBundle/Controller/"
     type:     annotation

@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Kamikaze3\Bundle\WriterFrontendBundle\Kamikaze3WriterFrontendBundle(),
+            new Kamikaze3\Bundle\WriterCoreBundle\Kamikaze3WriterCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
