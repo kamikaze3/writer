@@ -75,3 +75,40 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Kamikaze3\Bundle\WriterCoreBundle\Entity\User
+fos_rest:
+    routing_loader:
+        default_format: html
+    body_converter:
+        enabled: true
+    format_listener:
+        rules:
+            - { path: '^/api', priorities: ['xml', 'json'], fallback_format: json, prefer_extension: false }
+            - { path: '^/api', priorities: [ 'text/html', '*/*'], fallback_format: html, prefer_extension: false }
+    body_listener: true
+    disable_csrf_role: ROLE_API
+    exception:
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
+        messages:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
+    serializer:
+        groups: ["public"]
+    view:
+        formats:
+            html: true
+            json: true
+            xml: true
+        force_redirects:
+            html: true
+            json: true
+            xml: true
+        templating_formats:
+            html: true
+        failed_validation: HTTP_BAD_REQUEST
+        default_engine: twig
+        mime_types:
+            json: ['application/json', 'application/x-json']
+            rss: 'application/rss+xml'
+            jpg: 'image/jpeg'
+            png: 'image/png'
