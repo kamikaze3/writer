@@ -11,4 +11,16 @@
 		localStorageService.bind($scope, 'textAreaModel');
 	});
 
+	app.directive('editor', function() {
+		return {
+			restrict: 'E',
+
+			template: '<textarea ng-model="data" autofocus="true"></textarea><div>{{data}}</div>',
+
+			scope: {
+				data: '=info'
+			}
+		}
+	})
+
 })();

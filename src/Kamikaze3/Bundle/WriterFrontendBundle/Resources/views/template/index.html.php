@@ -1,1 +1,1 @@
-<textarea ng-model="textAreaModel"></textarea>
+<editor info="textAreaModel"></editor>
