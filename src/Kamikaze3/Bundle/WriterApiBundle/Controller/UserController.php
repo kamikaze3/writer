@@ -25,7 +25,7 @@ class UserController
 {
     /**
      * @param Request $request
-     * @Get("/{id}", name="show")
+     * @Get("/{id}")
      */
     public function showAction(Request $request, $id)
     {
@@ -34,7 +34,7 @@ class UserController
 
     /**
      * @param Request $request
-     * @Post("/", name="create")
+     * @Post("/")
      */
     public function createAction(Request $request)
     {
@@ -43,7 +43,7 @@ class UserController
 
     /**
      * @param Request $request
-     * @Post("/login", name="login")
+     * @Post("/login")
      */
     public function loginAction(Request $request)
     {

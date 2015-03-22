@@ -12,7 +12,3 @@ kamikaze3_writer_frontend:
     resource: "@Kamikaze3WriterFrontendBundle/Controller/"
     type:     annotation
     prefix:   /
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
