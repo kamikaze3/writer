@@ -1,3 +1,5 @@
+login_check:
+    path: /login_check
 users:
     type: rest
     resource: Kamikaze3\Bundle\WriterApiBundle\Controller\UserController

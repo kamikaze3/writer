@@ -30,7 +30,7 @@ class UserController extends FOSRestController
         $repository = $this->getDoctrine()->getRepository('Kamikaze3WriterCoreBundle:User');
         $user = $repository->find($id);
 
-        $view = $this->view($user, 200)
+        $view = $this->view($user->serialize(), 200)
                 ->setTemplate("")
                 ->setTemplateVar('user');
 
