@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io
 
+# Custom ignores
+src/Kamikaze3/Bundle/WriterFrontendBundle/Resources/public/vendor/
+
 ### OSX ###
 .DS_Store
 .AppleDouble

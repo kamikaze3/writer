@@ -1,0 +1,23 @@
+{
+  "name": "writer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/teamkamikaze3/writer",
+  "authors": [
+    "Frank Lyder bredland <fl@nyggen.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/Kamikaze3/Bundle/WriterFrontendBundle/Resources/public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "angular-route": "~1.3.15",
+    "angular-resource": "~1.3.15",
+    "fontawesome": "~4.3.0"
+  }
+}

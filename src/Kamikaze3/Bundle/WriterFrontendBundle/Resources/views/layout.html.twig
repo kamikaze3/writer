@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Writer</title>
 
+	{% block stylesheet %}
+        {% stylesheets
+            '@Kamikaze3WriterFrontendBundle/Resources/public/vendor/fontawesome/css/font-awesome.min.css'
+            %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
     {% stylesheets '@Kamikaze3WriterFrontendBundle/Resources/public/css/*' filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -12,6 +19,15 @@
 
     Mads is a penis
 
+	{% block javascripts %}
+        {% javascripts
+            '@Kamikaze3WriterFrontendBundle/Resources/public/vendor/angular/angular.min.js'
+            '@Kamikaze3WriterFrontendBundle/Resources/public/vendor/angular-resource/angular-resource.min.js'
+            '@Kamikaze3WriterFrontendBundle/Resources/public/vendor/angular-route/angular-route.min.js'
+            %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
     {% javascripts '@Kamikaze3WriterFrontendBundle/Resources/public/js/*' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
