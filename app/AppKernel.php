@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Kamikaze3\Bundle\WriterFrontendBundle\Kamikaze3WriterFrontendBundle(),
             new Kamikaze3\Bundle\WriterCoreBundle\Kamikaze3WriterCoreBundle(),
             new Kamikaze3\Bundle\WriterApiBundle\Kamikaze3WriterApiBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
