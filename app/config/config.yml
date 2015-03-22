@@ -112,3 +112,8 @@ fos_rest:
             rss: 'application/rss+xml'
             jpg: 'image/jpeg'
             png: 'image/png'
+lexik_jwt_authentication:
+    private_key_path:   %private_key_path%
+    public_key_path:    %public_key_path%
+    pass_phrase:        %pass_phrase%
+    token_ttl:          %token_ttl%
