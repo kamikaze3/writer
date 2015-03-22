@@ -187,6 +187,7 @@ Session.vim
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
+/app/var/
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 
