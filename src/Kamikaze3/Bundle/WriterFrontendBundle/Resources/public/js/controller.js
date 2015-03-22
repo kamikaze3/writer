@@ -3,12 +3,12 @@
     'use strict';
 
 	var app = angular.module('writer.controllers', [
-		'writer.services'
+		'writer.services',
+		'LocalStorageModule'
 	]);
 
-	app.controller('ApplicationController', ['$scope', function($scope) {
-		$scope.textAreaModel = "stuff";
-
-	}]);
+	app.controller('ApplicationController', function($scope, localStorageService) {
+		localStorageService.bind($scope, 'textAreaModel');
+	});
 
 })();
