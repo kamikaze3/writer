@@ -1,0 +1,8 @@
+services:
+    wsse.security.authentication.provider:
+        class: Kamikaze3\Bundle\WriterApiBundle\Security\Authentication\Provider\WsseProvider
+        arguments: ["", "%kernel.cache_dir%/security/nonces"]
+
+    wsse.security.authentication.listener:
+        class: Kamikaze3\Bundle\WriterApiBundle\Security\Firewall\WsseListener
+        arguments: ["@security.token_storage", "@security.authentication.manager"]
