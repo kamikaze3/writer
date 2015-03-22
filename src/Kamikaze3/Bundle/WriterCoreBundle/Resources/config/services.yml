@@ -1,0 +1,4 @@
+services:
+    kamikaze3.writer.user:
+        class: Kamikaze3\Bundle\WriterCoreBundle\Service\UserService
+        arguments: [@service_container]

@@ -24,7 +24,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * Owning side (un Phonenumber sólo puede pertenecer a un User)
+     * Owning side
      *
      * One-To-Many uni-directional relations with join-table only work using the
      * ManyToMany annotation and a unique-constraint.
