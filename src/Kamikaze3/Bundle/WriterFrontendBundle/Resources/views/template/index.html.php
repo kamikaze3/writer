@@ -1,0 +1,1 @@
+<textarea ng-model="textAreaModel"></textarea>

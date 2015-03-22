@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class FrontController extends Controller
 {
+	const TEMPLATE_PATH = "Kamikaze3WriterFrontendBundle";
     /**
      * @Route("/", name="index")
      * @Template("Kamikaze3WriterFrontendBundle::layout.html.twig")
@@ -15,5 +16,21 @@ class FrontController extends Controller
     public function indexAction()
     {
         return array();
+    }
+
+    /**
+    * @Route("/templates/{name}") 
+    */
+    public function templateAction($name)
+    {
+    	return $this->render(self::TEMPLATE_PATH . ':template:' . $name . '.php');
+    }
+
+    /**
+    * @Route("/templates/{folder}/{name}") 
+    */
+    public function template2Action($folder, $name)
+    {
+        return $this->render(self::TEMPLATE_PATH . ':template:' . $folder . ':' . $name . '.php');
     }
 }
